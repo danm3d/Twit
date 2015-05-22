@@ -12,17 +12,17 @@ namespace Twit
 {
     class Twitter
     {
-        public SingleUserAuthorizer userAuth { get; }
+        private SingleUserAuthorizer userAuth { get; set; }
         public Twitter()
         {
             userAuth = new SingleUserAuthorizer
             {
                 CredentialStore = new SingleUserInMemoryCredentialStore
                 {
-                    ConsumerKey = "u7sXwunH9BShuhmvWkemvWm6E",
-                    ConsumerSecret = "MS9Nh3sDnjugcBrvId4w2q9ovUX4ZIWKukXkJPjcfihy9SMOZC",
-                    AccessToken = "36460991-cFfU83zjD4irSWPaCkziO6JWhOCqYQFwmpKr1taaL",
-                    AccessTokenSecret = "Rdwd5hrsDiEMYQachJ8Jc5LBqIxAkcUewTX7uyKaU446h"
+                    ConsumerKey = Settings.ConsumerKey,
+                    ConsumerSecret = Settings.ConsumerSecret,
+                    AccessToken = Settings.AccessToken,
+                    AccessTokenSecret = Settings.AccessTokenSecret
                 }
             };
         }
