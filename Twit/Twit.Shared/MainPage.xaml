@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Twit.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Twit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="600*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtTweetMessage" VerticalAlignment="Center" Height="32" Margin="0,32"/>
+
+            <Button x:Name="btnTweet" HorizontalAlignment="Center" Grid.Column="1" Click="btnTweet_Click">Tweet</Button>
+        </Grid>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel x:Name="listTweets">
+
+            </StackPanel>
+        </ScrollViewer>
+        <Button Grid.Row="2" Click="Button_Click" HorizontalAlignment="Center">Retrieve Tweets</Button>
+    </Grid>
+</Page>
